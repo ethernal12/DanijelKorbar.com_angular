@@ -1,0 +1,31 @@
+<div [@routeAnimations]>
+  <h1>My gtihub repositories:</h1>
+  <mat-form-field>
+    <mat-label>Select Coding Language</mat-label>
+    <mat-select [(ngModel)]="selectedLanguage" (ngModelChange)="onLanguageSelectionChange()">
+      <mat-option *ngFor="let language of availableLanguages" [value]="language">{{ language }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div class="repo-cards">
+
+    <mat-card class="custom-card" *ngFor="let repo of repositories; let i = index"
+              (mouseenter)="onMouseEnter(i)"
+              [ngClass]="{'default-visible': defaultVisibleIndex === i, 'fade-in-animation': defaultVisibleIndex === i}"
+
+    >
+
+      <mat-card-header>
+        <mat-card-title>{{ repo.name | uuppercase}}  </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ repo.name }}</p>
+        <p>Coded in: {{repo.language}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a [href]="repo.html_url" target="_blank" class="custom-link" mat-button>View on GitHub</a>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+
+</div>

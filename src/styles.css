@@ -1,0 +1,217 @@
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: rgb(0, 0, 0);
+  background-color: #6ed8f6;
+}
+
+.bg-custom {
+  background-color: #6ed8f6;
+}
+
+.centered-container {
+  background-color: #bae8f6;
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  /* Use Flexbox for layout */
+  align-items: center;
+  /* Vertically center the content */
+  background-image: url('assets/images/block-backgorund.jpg');
+  /* Replace with the actual path */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.myPicture {
+  margin-bottom: -7px;
+  flex: 1;
+
+}
+
+.myPicture img {
+  width: 60%;
+  /* Make the image adjust to the width of its container */
+  max-height: 100%
+}
+
+.introduction {
+  font-family: "Corbel Light";
+  color: #fdeb78;
+  flex: 1;
+  padding: 0;
+  /* Remove padding */
+
+}
+
+.mat-toolbar {
+  background-color: #ffe951 !important;
+  color: rgb(216, 28, 28);
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .mat-toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mat-button {
+    color: rgb(20, 103, 228);
+
+  }
+}
+
+.footer {
+  background-color: #9ce4f8 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-left-aligned {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.myNameIs {
+  font-size: 2vw;
+}
+
+.myName {
+  margin-top: 2vw;
+  font-size: 4vw;
+}
+
+/* Adjust font sizes for larger screens */
+@media screen and (min-width: 1200px) {
+  .myNameIs {
+    font-size: 1.5vw;
+    margin-bottom: 15px;
+  }
+
+  .myName {
+    font-size: 3vw;
+  }
+}
+
+.centered-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2) !important;
+  width: 40%;
+  height: 60%;
+}
+
+.centered-form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.centered-form-container mat-label,
+.centered-form-container input,
+.centered-form-container textarea {
+  width: 20vw;
+  margin-bottom: 10px;
+}
+
+.centered-form-container button {
+  margin-top: 10px;
+}
+
+.custom-card {
+  flex: 1;
+  /*flex-basis: calc(33.33% - 20px); !* Adjust width and spacing *!*/
+  margin: 10px;
+  transition: opacity 0.8s !important;
+  padding: 10px; /* Add some padding for spacing */
+  box-shadow: 0 50px 40px rgba(255, 255, 255, 0.7);
+  opacity: 0.3; /* Initial opacity */
+}
+
+.custom-card.default-visible {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-animation {
+  animation: fadeIn 1.0s;
+}
+
+.custom-link {
+  color: #05458a !important; /* Change this to your desired color */
+}
+
+.repo-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust alignment as needed */
+}
+
+.matInput {
+  margin-bottom: 10px;
+}
+
+.bold-label {
+  font-weight: bold !important;
+}
+.button{
+  background-color: black ;
+  height: 100px !important;
+}
+
+
+.activeStyles {
+
+  cursor: pointer !important;
+
+  /* Add some box shadow for depth */
+  box-shadow: 5px 7px 10px #a3dff6 !important;
+
+  /* Add a subtle transition for smooth effects */
+  transition: background-color 0.9s, box-shadow 0.6s;;
+
+
+}
+.custom-button{
+  background-color: #ffe951 !important;
+  height: 30px;
+
+}
+
+
+
+
+

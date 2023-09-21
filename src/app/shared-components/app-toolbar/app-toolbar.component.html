@@ -1,0 +1,14 @@
+<script src="../../services/weather-service.service.ts"></script>
+<mat-toolbar>
+
+  <div *ngFor="let navGumb of navGumbi" class="col">
+    <app-button-toolbar
+      [style]="navGumb.style"
+      [route]="navGumb.route || ''"
+      [ikona]="navGumb.ikona"
+      [tekst]="navGumb.tekst"
+      [ngClass]="{'activeStyles': isRouteActive(navGumb.route)}"
+    />
+  </div>
+
+</mat-toolbar>
