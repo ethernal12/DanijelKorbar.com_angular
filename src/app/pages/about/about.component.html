@@ -1,6 +1,9 @@
 
-<div [@routeAnimations]>
+
+<div [@routeAnimations] class="global-div" >
+
   <h1>My programming journey</h1>
+
   <p>
 
     As far as I can remember I was fascinated with programming. The sheer
@@ -10,6 +13,17 @@
     education leading to a profession, for some reason I chose the field of
     electronics.
   </p>
+  <div class="gallery-container">
+    <div class="gallery">
+      <img *ngFor="let image of images; let i = index"
+           [src]="image.src"
+           [alt]="image.alt"
+           [class.active]="i === currentIndex"
+           (load)="imageLoaded()"
+           (animationend)="animationEnd()"
+           (transitionend)="transitionEnd()">
+    </div>
+  </div>
   <p>
     Like I described in my biography it wasn`t until my job where I decided
     to learn Excel`s macros that I found my love and appreciation for

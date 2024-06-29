@@ -1,217 +1,270 @@
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  color: rgb(0, 0, 0);
-  background-color: #6ed8f6;
-}
-
-.bg-custom {
-  background-color: #6ed8f6;
-}
-
-.centered-container {
-  background-color: #bae8f6;
-  text-align: center;
+.introduction {
+    z-index: 0;
+    color: #ffe951 !important;
+    flex: 1;
+    padding: 0;
 }
 
 .header-content {
-  display: flex;
-  /* Use Flexbox for layout */
-  align-items: center;
-  /* Vertically center the content */
-  background-image: url('assets/images/block-backgorund.jpg');
-  /* Replace with the actual path */
-  background-position: center;
-  /* Center the background image */
-  background-repeat: no-repeat;
-  background-size: cover;
+    display: flex;
+    /* Use Flexbox for layout */
+    align-items: center;
+    /* Vertically center the content */
+    background-image: url('assets/images/block-backgorund.jpg');
+    /* Replace with the actual path */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .myPicture {
-  margin-bottom: -7px;
-  flex: 1;
+    margin-bottom: -7px;
+    flex: 1;
 
 }
 
 .myPicture img {
-  width: 60%;
-  /* Make the image adjust to the width of its container */
-  max-height: 100%
+
+    width: 50%;
+    /* Make the image adjust to the width of its container */
+    max-height: 50%
 }
 
-.introduction {
-  font-family: "Corbel Light";
-  color: #fdeb78;
-  flex: 1;
-  padding: 0;
-  /* Remove padding */
-
-}
 
 .mat-toolbar {
-  background-color: #ffe951 !important;
-  color: rgb(216, 28, 28);
+    font-family: Chiller;
+    background-color: #ffe951 !important;
+    color: rgb(216, 28, 28);
 }
-
-
 
 
 @media screen and (max-width: 768px) {
-  .mat-toolbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    .mat-toolbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .mat-button {
-    color: rgb(20, 103, 228);
+    .mat-button {
+        color: rgb(20, 103, 228);
 
-  }
+    }
 }
 
 .footer {
-  background-color: #9ce4f8 !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    color: white;
+    background-color: #0a0d16 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .centered-left-aligned {
-  text-align: center;
+    text-align: center;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 .myNameIs {
-  font-size: 2vw;
+    font-size: 2vw;
+    color: #ffe951 !important;
 }
 
 .myName {
-  margin-top: 2vw;
-  font-size: 4vw;
+    margin-top: 2vw;
+    font-size: 4vw;
+    color: #ffe951 !important;
 }
 
 /* Adjust font sizes for larger screens */
 @media screen and (min-width: 1200px) {
-  .myNameIs {
-    font-size: 1.5vw;
-    margin-bottom: 15px;
-  }
+    .myNameIs {
+        font-size: 1.5vw;
+        margin-bottom: 15px;
+    }
 
-  .myName {
-    font-size: 3vw;
-  }
+    .myName {
+        font-size: 3vw;
+        color: #ffe951 !important;
+    }
 }
 
 .centered-form-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2) !important;
-  width: 40%;
-  height: 60%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    height: 60%;
 }
 
 .centered-form-container form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
-.centered-form-container mat-label,
+.centered-form-container mat-label {
+    color: black;
+}
+
 .centered-form-container input,
 .centered-form-container textarea {
-  width: 20vw;
-  margin-bottom: 10px;
+    width: 20vw;
+    margin-bottom: 10px;
 }
 
 .centered-form-container button {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .custom-card {
-  flex: 1;
-  /*flex-basis: calc(33.33% - 20px); !* Adjust width and spacing *!*/
-  margin: 10px;
-  transition: opacity 0.8s !important;
-  padding: 10px; /* Add some padding for spacing */
-  box-shadow: 0 50px 40px rgba(255, 255, 255, 0.7);
-  opacity: 0.3; /* Initial opacity */
+    background-color: #132e2f;
+    flex: 1;
+    /*flex-basis: calc(33.33% - 20px); !* Adjust width and spacing *!*/
+    margin: 10px;
+    transition: opacity 0.8s !important;
+    padding: 10px; /* Add some padding for spacing */
+    box-shadow: 0 50px 40px rgba(199, 63, 63, 0.7);
+    opacity: 0.3; /* Initial opacity */
 }
 
 .custom-card.default-visible {
-  opacity: 1;
+    opacity: 1;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .fade-in-animation {
-  animation: fadeIn 1.0s;
+    animation: fadeIn 1.0s;
 }
 
 .custom-link {
-  color: #05458a !important; /* Change this to your desired color */
+    color: #05458a !important; /* Change this to your desired color */
 }
 
 .repo-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Adjust alignment as needed */
+    background-color: #121929;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust alignment as needed */
 }
 
 .matInput {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .bold-label {
-  font-weight: bold !important;
+    font-weight: bold !important;
 }
-.button{
-  background-color: black ;
-  height: 100px !important;
+
+.button {
+    background-color: black;
+    height: 100px !important;
 }
 
 
 .activeStyles {
 
-  cursor: pointer !important;
+    cursor: pointer !important;
 
-  /* Add some box shadow for depth */
-  box-shadow: 5px 7px 10px #a3dff6 !important;
+    /* Add some box shadow for depth */
+    box-shadow: 5px 7px 10px #23333a !important;
 
-  /* Add a subtle transition for smooth effects */
-  transition: background-color 0.9s, box-shadow 0.6s;;
+    /* Add a subtle transition for smooth effects */
+    transition: background-color 0.9s, box-shadow 0.6s;;
 
 
 }
-.custom-button{
-  background-color: #ffe951 !important;
-  height: 30px;
 
+.custom-button {
+    background-color: #ffe951 !important;
+    height: 30px;
+
+}
+
+body {
+    margin: 0;
+    font-size: 15px;
+    font-family: Chiller;
+    color: rgb(0, 0, 0);
+    background-color: #131a2a;
+}
+
+.centered-container {
+
+    text-align: center;
 }
 
 
 
+.global-div-github {
+    color: #57b4c7;
+    font-family: Leelawadee;
+    background-color: #131a2a;
+    padding: 100px;
+    text-align: center;
+    /* Add any other global styles you need */
+}
 
+.github_title {
+    color: #ffffff;
+}
+.global-div {
+    position: relative; /* Ensure the container is positioned */
+    z-index: 2; /* Ensure text appears above gallery */
+    color: #fcfcfc;
+    font-family: "Leelawadee UI";
+    text-shadow: 5px 5px 10px rgba(12, 24, 24, 0.9);
+    font-size: large;
+    background-color: #131a2a;
+    padding: 100px;
+    text-align: center;
+    /* Add any other global styles you need */
+}
 
+.gallery-container {
+    position: absolute; /* Position the gallery container absolutely */
+    top: 50%; /* Adjust positioning from top */
+    left: 50%; /* Adjust positioning from left */
+    transform: translate(-50%, -50%); /* Center the gallery container horizontally and vertically */
+    z-index:-1; /* Ensure gallery is below text */
+    pointer-events: none; /* Prevents gallery from blocking mouse events on text */
+
+}
+
+.gallery {
+    display: flex; /* Use flexbox for image alignment */
+    justify-content: center; /* Center the gallery images horizontally */
+    gap: 20px; /* Adjust gap between images */
+
+}
+
+.gallery img {
+    width: 70%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    opacity: 0;
+    transition: opacity 5s ease-in-out; /* Adjust transition timing as needed */
+    box-shadow: 0 0 15px rgba(152, 152, 220, 0.3);
+    pointer-events: none; /* Prevents gallery images from blocking mouse events on text */
+}
+
+.gallery img.active {
+    opacity: 1;
+}

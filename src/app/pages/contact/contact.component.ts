@@ -17,14 +17,7 @@ export class ContactComponent {
   cityName:string  ='';
   constructor(private getWeatherService: WeatherServiceService) {
   }
-  getWeatherForCity(){
-    this.getWeatherService.getWeatherData(this.cityName)
-      .then(response => {
-        this.weatherData = response;
-      }).catch(error => {
-      console.error(error)
-    })
-  }
+
 
   submitForm(contactForm: NgForm) {
     if (contactForm.valid) {
