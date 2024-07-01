@@ -1,8 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {slideInAnimation} from 'src/app/animations/animations';
 import {FormControl, NgForm, Validators} from '@angular/forms';
-import {WeatherServiceService} from "../../services/weather-service.service";
-import {WeatherData} from "../../models/weather-data";
+import { HttpClient } from '@angular/common/http'
 
 
 @Component({
@@ -13,18 +12,25 @@ import {WeatherData} from "../../models/weather-data";
 })
 
 export class ContactComponent {
-  weatherData: WeatherData = {};
-  cityName:string  ='';
-  constructor(private getWeatherService: WeatherServiceService) {
-  }
-
+  constructor(private httpClient: HttpClient) {}
 
   submitForm(contactForm: NgForm) {
+    console.log('Submitting form:', contactForm.value);
+
     if (contactForm.valid) {
-      alert('Submit was succefull!')
+      this.httpClient.post('https://formspree.io/f/xjkbvglo', contactForm.value)
+          .subscribe(
+              response => {
+                console.log('Formspree response:', response);
+                alert('Form submitted successfully!');
+              },
+              error => {
+                console.error('Formspree submission error:', error);
+                alert('Form submission failed. Please try again.');
+              }
+          );
     } else {
-      alert('Submit was not successful!')
+      alert('Submit was not successful. Please fill out the form correctly.');
     }
   }
-
 }

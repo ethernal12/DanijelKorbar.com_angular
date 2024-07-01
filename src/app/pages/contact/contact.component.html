@@ -1,12 +1,11 @@
-<script src="../../services/weather-service.service.ts"></script>
 <div [@routeAnimations] class="centered-form-container">
 
 
-  <form #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)">
-    <app-form-field-username/>
-    <app-form-field-email/>
-    <app-form-field-messages/>
+    <form #contactForm="ngForm" action="https://formspree.io/f/xjkbvglo" method="POST" (ngSubmit)="submitForm(contactForm)">
+        <app-form-field-username/>
+        <app-form-field-email/>
+        <app-form-field-messages/>
 
-    <button type="submit">Submit</button>
-  </form>
+        <button type="submit">Submit</button>
+    </form>
 </div>

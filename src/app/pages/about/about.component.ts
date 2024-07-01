@@ -17,9 +17,10 @@ export class AboutComponent implements OnInit{
 
 
   images = [
-    { src: '../../../assets/images/surf2.jpg', alt: 'Image 1' },
-    { src: '../../../assets/images/teni.jpg', alt: 'Image 2' },
-    { src: '../../../assets/images/sea.jpg', alt: 'Image 3' },
+
+    { src: '../../../assets/images/tenis_enhanced.png', alt: 'Image 2' },
+    { src: '../../../assets/images/surf3_enhanced.png', alt: 'Image 1' },
+    { src: '../../../assets/images/sea_enhanced.png', alt: 'Image 3' },
     // Add more images as needed
   ];
 
@@ -49,8 +50,10 @@ export class AboutComponent implements OnInit{
   imageLoaded(): void {
     this.animationInProgress = true;
   }
-
+  animationDone = false;
   animationEnd(): void {
+    this.animationDone = true;
+    console.log(this.animationDone , 'animation done')
     this.animationInProgress = false;
   }
 

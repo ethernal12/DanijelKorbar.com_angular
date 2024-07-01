@@ -7,6 +7,7 @@ import {FormControl, NgForm, Validators} from "@angular/forms";
   styleUrls: ['./form-field-messages.component.css']
 })
 export class FormFieldMessagesComponent {
+  @Input() label: string = "Name"
   @Input() formControl = new FormControl('', [
     Validators.required,
     Validators.minLength(10)
@@ -14,13 +15,13 @@ export class FormFieldMessagesComponent {
 
   getErrorMessage() {
     if (this.formControl.hasError('required')) {
-      return 'Sporočilo je obvezno!';
+      return 'Message must have content!';
     }
     if (this.formControl.hasError('minlength')){
-      return 'Sporočilo je premajhno!';
+      return 'Message must contain at least 10 char.!';
     }
 
-    return 'Sporočilo ni veljavno!'
+    return 'Message not valid!'
   }
 
 }

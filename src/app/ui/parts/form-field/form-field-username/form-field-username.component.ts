@@ -6,13 +6,14 @@ import {FormControl, Validators} from "@angular/forms";
   styleUrls: ['./form-field-username.component.css']
 })
 export class FormFieldUsernameComponent {
-  @Input() label: string = "Ime in priimek"
+  @Input() label: string = "Name"
   @Input() formControl = new FormControl('', [Validators.required, Validators.pattern("[a-zA-Z]+\\s+[a-zA-Z]+")]);
 
   getErrorMessage() {
     if (this.formControl.hasError('required')) {
-      return 'Input is mandatory!';
+      return 'Name input is empty!';
     }
-    return 'Input doesn`t have 2 mandatory letters';
+    return '';
   }
+
 }

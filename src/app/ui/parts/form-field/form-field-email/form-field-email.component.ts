@@ -8,11 +8,13 @@ import {FormControl, Validators} from "@angular/forms";
 })
 export class FormFieldEmailComponent {
   @Input() formControl = new FormControl('', [Validators.required, Validators.email]);
-  getErrorMessage(){
-    if(this.formControl.hasError('required')){
-      return 'Email is mandatory!'
-    }
-    return 'Email is not valid!'
-  }
 
+  constructor() {}
+
+  getErrorMessage() {
+    if (this.formControl.hasError('required')) {
+      return 'Email is mandatory!';
+    }
+    return this.formControl.hasError('email') ? 'Email is not valid!' : '';
+  }
 }

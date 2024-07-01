@@ -1,7 +1,7 @@
 <script src="../form-feild-username/form-feild-username.component.ts"></script>
 <mat-form-field class="w-100">
   <mat-label>Email</mat-label>
-  <input matInput [formControl]="formControl" required>
+  <input  matInput  id="email" type="email" name="email" [formControl]="formControl" required>
   <mat-icon matPrefix>email</mat-icon>
   <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
 </mat-form-field>
