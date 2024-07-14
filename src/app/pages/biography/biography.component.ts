@@ -8,5 +8,6 @@ import { slideInAnimation } from 'src/app/animations/animations';
   animations: [slideInAnimation],
 })
 export class BiographyComponent {
+  panelOpenState = false;
 
 }
