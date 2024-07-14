@@ -8,7 +8,7 @@ import {WeatherData} from "../../models/weather-data";
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css'],
+  styleUrls: ['./contact.component.scss'],
   animations: [slideInAnimation],
 })
 

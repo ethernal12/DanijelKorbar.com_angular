@@ -8,7 +8,7 @@ import {ProjectLanguage} from "../../models/gitHub-data";
 @Component({
   selector: 'app-github-respositories',
   templateUrl: './github-respositories.component.html',
-  styleUrls: ['./github-respositories.component.css'],
+  styleUrls: ['./github-respositories.component.scss'],
   animations: [slideInAnimation],
 })
 

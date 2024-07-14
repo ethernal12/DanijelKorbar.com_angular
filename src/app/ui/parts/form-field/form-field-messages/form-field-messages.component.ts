@@ -4,7 +4,7 @@ import {FormControl, NgForm, Validators} from "@angular/forms";
 @Component({
   selector: 'app-form-field-messages',
   templateUrl: './form-field-messages.component.html',
-  styleUrls: ['./form-field-messages.component.css']
+  styleUrls: ['./form-field-messages.component.scss']
 })
 export class FormFieldMessagesComponent {
   @Input() formControl = new FormControl('', [
