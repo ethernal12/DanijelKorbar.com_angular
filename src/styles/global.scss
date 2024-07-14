@@ -106,8 +106,6 @@ ul {
   margin: auto;
   padding: 20px;
   border-radius: 10px;
-  width: 40%;
-  height: 60%;
 }
 
 .centered-form-container form {
@@ -122,25 +120,13 @@ ul {
   color: black;
 }
 
-.centered-form-container input,
-.centered-form-container textarea {
-  width: 20vw;
-  margin-bottom: 10px;
-}
-
-.centered-form-container button {
-  margin-top: 10px;
-}
-
 .custom-card {
   background-color: #132e2f;
   flex: 1;
   /*flex-basis: calc(33.33% - 20px); !* Adjust width and spacing *!*/
-  margin: 10px;
   transition: opacity 0.8s !important;
-  padding: 10px; /* Add some padding for spacing */
   box-shadow: 0 50px 40px rgba(199, 63, 63, 0.7);
-  opacity: 0.3; /* Initial opacity */
+  opacity: 0.7; /* Initial opacity */
 }
 
 .custom-card.default-visible {
@@ -223,7 +209,6 @@ body {
   color: #57b4c7;
   font-family: Leelawadee;
   background-color: #131a2a;
-  padding: 100px;
   text-align: center;
   /* Add any other global styles you need */
 }
