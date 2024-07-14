@@ -59,7 +59,7 @@
 
 .footer {
   color: white;
-  background-color: #0a0d16 !important;
+  background-color: #0a0d16;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,7 +239,6 @@ body {
   text-shadow: 5px 5px 10px rgba(12, 24, 24, 0.9);
   font-size: large;
   background-color: #131a2a;
-  padding: 100px;
   text-align: center;
   /* Add any other global styles you need */
 }
@@ -251,19 +250,18 @@ body {
   transform: translate(-50%, -50%); /* Center the gallery container horizontally and vertically */
   z-index:-1; /* Ensure gallery is below text */
   pointer-events: none; /* Prevents gallery from blocking mouse events on text */
-
 }
 
 .gallery {
-  display: flex; /* Use flexbox for image alignment */
-  justify-content: center; /* Center the gallery images horizontally */
-  gap: 20px; /* Adjust gap between images */
-
+  display: flex; /* Enable flexbox for the gallery */
+  flex-direction: column; /* Default to column direction */
+  justify-content: center; /* Center the gallery images horizontally */  gap: 20px; /* Adjust gap between images */
 }
 
 .gallery img {
-  width: 70%; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; /* Adjust width as needed */
+  max-height: 300px; /* Maintain aspect ratio */
+  height: auto;
   opacity: 0;
   transition: opacity 5s ease-in-out; /* Adjust transition timing as needed */
   box-shadow: 0 0 15px rgba(152, 152, 220, 0.3);
@@ -272,4 +270,14 @@ body {
 
 .gallery img.active {
   opacity: 1;
+}
+@media (min-width: 768px) {
+  .gallery {
+    flex-direction: row; /* Change to row direction at md breakpoint */
+  }
+  .gallery img {
+    width: auto; /* Let the browser calculate the width */
+    max-height: 60%; /* Ensure the image does not exceed 50% of the container height */
+    height: 300px; /* Set a fixed height */
+  }
 }
