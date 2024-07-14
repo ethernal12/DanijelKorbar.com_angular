@@ -15,7 +15,6 @@ export class AboutComponent implements OnInit{
     this.fadeInComplete = true;
   }
 
-
   images = [
     { src: '../../../assets/images/surf2.jpg', alt: 'Image 1' },
     { src: '../../../assets/images/teni.jpg', alt: 'Image 2' },

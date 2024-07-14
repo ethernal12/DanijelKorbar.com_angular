@@ -1,7 +1,7 @@
 <script src="../../services/weather-service.service.ts"></script>
-<mat-toolbar>
+<mat-toolbar class="row py-4" style="height: 100%">
 
-  <div *ngFor="let navGumb of navGumbi" class="col">
+  <div *ngFor="let navGumb of navGumbi" class="col-12 col-md text-center">
     <app-button-toolbar
       [style]="navGumb.style"
       [route]="navGumb.route || ''"
