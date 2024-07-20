@@ -1,12 +1,13 @@
-<script src="../../services/weather-service.service.ts"></script>
 <div [@routeAnimations] class="centered-form-container">
 
 
-  <form #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)">
-    <app-form-field-username/>
-    <app-form-field-email/>
-    <app-form-field-messages/>
+  <form [formGroup]="contactForm" (ngSubmit)="sendFormspree()">
+    <label for="email">Email</label>
+    <input id="email" type="email" formControlName="email">
 
-    <button type="submit">Submit</button>
+    <label for="message">Message</label>
+    <textarea id="message" formControlName="message"></textarea>
+
+    <button type="submit" [disabled]="!contactForm.valid">Submit</button>
   </form>
 </div>
