@@ -13,8 +13,8 @@
     education leading to a profession, for some reason I chose the field of
     electronics.
   </p>
-  <div class="gallery-container" [@routeAnimations] (@routeAnimations.done)="animationEnd()">
-    <div class="gallery" *ngIf="animationDone" [@fadeInAnimation]>
+  <div class="gallery-container">
+    <div class="gallery">
       <img *ngFor="let image of images; let i = index"
            [src]="image.src"
            [alt]="image.alt"

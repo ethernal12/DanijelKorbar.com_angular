@@ -7,6 +7,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {FormFieldUsernameComponent} from "../../ui/parts/form-field/form-field-username/form-field-username.component";
 import {FormFieldMessagesComponent} from "../../ui/parts/form-field/form-field-messages/form-field-messages.component";
 import {ContactComponent} from "./contact.component";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {ContactComponent} from "./contact.component";
     MatInputModule,
     ReactiveFormsModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule
   ]
 })
 export class ContactModule { }

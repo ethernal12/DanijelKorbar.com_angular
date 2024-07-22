@@ -4,7 +4,7 @@ import {FormControl, Validators} from "@angular/forms";
 @Component({
   selector: 'app-form-field-email',
   templateUrl: './form-field-email.component.html',
-  styleUrls: ['./form-field-email.component.css']
+  styleUrls: ['./form-field-email.component.scss']
 })
 export class FormFieldEmailComponent {
   @Input() formControl = new FormControl('', [Validators.required, Validators.email]);

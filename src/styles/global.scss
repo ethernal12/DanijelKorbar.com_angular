@@ -1,0 +1,268 @@
+// STYLE
+.background-header {
+  background-image: url('/assets/images/block-backgorund.jpg');
+  position: relative;
+  background-size: cover;
+  background-position: top;
+}
+
+.introduction {
+  z-index: 0;
+  color: #ffe951 !important;
+  flex: 1;
+  padding: 0;
+}
+
+.header-content {
+  display: flex;
+  /* Use Flexbox for layout */
+  align-items: center;
+  /* Vertically center the content */
+  /* Replace with the actual path */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.myPicture {
+  margin-bottom: -7px;
+  flex: 1;
+}
+
+.myPicture img {
+  width: 50%;
+  /* Make the image adjust to the width of its container */
+  max-height: 50%
+}
+
+
+.mat-toolbar {
+  font-family: Chiller;
+  background-color: #ffe951 !important;
+  color: rgb(216, 28, 28);
+}
+
+
+@media screen and (max-width: 768px) {
+  .mat-toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mat-button {
+    color: rgb(20, 103, 228);
+
+  }
+}
+
+.footer {
+  color: white;
+  background-color: #0a0d16;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-left-aligned {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.myNameIs {
+  font-size: 2vw;
+  color: #ffe951 !important;
+}
+
+.myName {
+  margin-top: 2vw;
+  font-size: 4vw;
+  color: #ffe951 !important;
+}
+
+/* Adjust font sizes for larger screens */
+@media screen and (min-width: 1200px) {
+  .myNameIs {
+    font-size: 1.5vw;
+    margin-bottom: 15px;
+  }
+
+  .myName {
+    font-size: 3vw;
+    color: #ffe951 !important;
+  }
+}
+
+.centered-form-container {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.centered-form-container form {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.centered-form-container mat-label {
+  color: black;
+}
+
+.custom-card {
+  background-color: #132e2f;
+  flex: 1;
+  /*flex-basis: calc(33.33% - 20px); !* Adjust width and spacing *!*/
+  transition: opacity 0.8s !important;
+  box-shadow: 0 50px 40px rgba(199, 63, 63, 0.7);
+  opacity: 0.7; /* Initial opacity */
+}
+
+.custom-card.default-visible {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-animation {
+  animation: fadeIn 1.0s;
+}
+
+.custom-link {
+  color: #05458a !important; /* Change this to your desired color */
+}
+
+.repo-cards {
+  background-color: #121929;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust alignment as needed */
+}
+
+.matInput {
+  margin-bottom: 10px;
+}
+
+.bold-label {
+  font-weight: bold !important;
+}
+
+.button {
+  background-color: black;
+  height: 100px !important;
+}
+
+
+.activeStyles {
+
+  cursor: pointer !important;
+
+  /* Add some box shadow for depth */
+  box-shadow: 5px 7px 10px #23333a !important;
+
+  /* Add a subtle transition for smooth effects */
+  transition: background-color 0.9s, box-shadow 0.6s;;
+
+
+}
+
+.custom-button {
+  background-color: #ffe951 !important;
+  height: 30px;
+
+}
+
+body {
+  margin: 0;
+  font-size: 15px;
+  font-family: Chiller;
+  color: rgb(0, 0, 0);
+  background-color: #131a2a;
+}
+
+.centered-container {
+
+  text-align: center;
+}
+
+
+
+.global-div-github {
+  color: #57b4c7;
+  font-family: Leelawadee;
+  background-color: #131a2a;
+  text-align: center;
+  /* Add any other global styles you need */
+}
+
+.github_title {
+  color: #ffffff;
+}
+.global-div {
+  position: relative; /* Ensure the container is positioned */
+  z-index: 2; /* Ensure text appears above gallery */
+  color: #fcfcfc;
+  font-family: "Leelawadee UI";
+  text-shadow: 5px 5px 10px rgba(12, 24, 24, 0.9);
+  font-size: large;
+  background-color: #131a2a;
+  text-align: center;
+  /* Add any other global styles you need */
+}
+
+.gallery-container {
+  position: absolute; /* Position the gallery container absolutely */
+  top: 50%; /* Adjust positioning from top */
+  left: 50%; /* Adjust positioning from left */
+  transform: translate(-50%, -50%); /* Center the gallery container horizontally and vertically */
+  z-index:-1; /* Ensure gallery is below text */
+  pointer-events: none; /* Prevents gallery from blocking mouse events on text */
+}
+
+.gallery {
+  display: flex; /* Enable flexbox for the gallery */
+  flex-direction: column; /* Default to column direction */
+  justify-content: center; /* Center the gallery images horizontally */  gap: 20px; /* Adjust gap between images */
+}
+
+.gallery img {
+  width: 100%; /* Adjust width as needed */
+  max-height: 300px; /* Maintain aspect ratio */
+  height: auto;
+  opacity: 0;
+  transition: opacity 5s ease-in-out; /* Adjust transition timing as needed */
+  box-shadow: 0 0 15px rgba(152, 152, 220, 0.3);
+  pointer-events: none; /* Prevents gallery images from blocking mouse events on text */
+}
+
+.gallery img.active {
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .gallery {
+    flex-direction: row; /* Change to row direction at md breakpoint */
+  }
+  .gallery img {
+    width: auto; /* Let the browser calculate the width */
+    max-height: 60%; /* Ensure the image does not exceed 50% of the container height */
+    height: 300px; /* Set a fixed height */
+  }
+}

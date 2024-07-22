@@ -4,8 +4,7 @@ import {ButtonToolbarModel} from "../../ui/parts/buttons/button-toolbar-model";
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-app-toolbar',
-  templateUrl: './app-toolbar.component.html',
-  styleUrls: ['./app-toolbar.component.css']
+  templateUrl: './app-toolbar.component.html'
 })
 export class AppToolbarComponent {
   constructor(private router: Router) {

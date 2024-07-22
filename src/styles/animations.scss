@@ -1,0 +1,21 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-animation {
+  animation: fadeIn 1.0s;
+}
+
+.gallery img {
+  width: 70%; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 0;
+  transition: opacity 5s ease-in-out; /* Adjust transition timing as needed */
+  box-shadow: 0 0 15px rgba(152, 152, 220, 0.3);
+  pointer-events: none; /* Prevents gallery images from blocking mouse events on text */
+}
