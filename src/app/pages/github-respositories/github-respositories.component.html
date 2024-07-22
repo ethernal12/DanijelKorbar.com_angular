@@ -1,12 +1,12 @@
-<div [@routeAnimations] class="global-div-github">
-  <h1 class  = 'github_title'>My gtihub repositories:</h1>
+<div [@routeAnimations] class="global-div-github p-3 p-md-5">
+  <h1 class ='github_title'>My gtihub repositories:</h1>
   <mat-form-field>
     <mat-label>Select Coding Language</mat-label>
     <mat-select [(ngModel)]="selectedLanguage" (ngModelChange)="onLanguageSelectionChange()">
       <mat-option *ngFor="let language of availableLanguages" [value]="language">{{ language }}</mat-option>
     </mat-select>
   </mat-form-field>
-  <div class="repo-cards">
+  <div class="repo-cards gap-4">
 
     <mat-card class="custom-card" *ngFor="let repo of repositories; let i = index"
               (mouseenter)="onMouseEnter(i)"

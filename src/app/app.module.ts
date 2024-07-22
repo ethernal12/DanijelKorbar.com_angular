@@ -24,6 +24,7 @@ import { UppercasePipe } from './ui/pipes/uppercase.pipe';
 import {ContactModule} from "./pages/contact/contact.module";
 import { ButtonToolbarComponent } from './ui/parts/buttons/button-toolbar.component';
 import {MatSelectModule} from "@angular/material/select";
+import { MatExpansionModule } from "@angular/material/expansion";
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import {MatSelectModule} from "@angular/material/select";
         MatInputModule,
         ReactiveFormsModule,
         ContactModule,
-        MatSelectModule
+        MatSelectModule,
+        MatExpansionModule
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,7 +3,7 @@ import {Component, Input} from '@angular/core';
 @Component({
   selector: 'app-button-toolbar',
   templateUrl: './button-toolbar.component.html',
-  styleUrls: ['./button-toolbar.component.css']
+  styleUrls: ['./button-toolbar.component.scss']
 })
 export class ButtonToolbarComponent {
   //activeStyles: string = "background-color: black; color: white; border:none;cursor: pointer"

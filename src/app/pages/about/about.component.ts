@@ -4,7 +4,7 @@ import {fadeInAnimation, slideInAnimation} from 'src/app/animations/animations';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css'],
+  styleUrls: ['./about.component.scss'],
   animations: [slideInAnimation, fadeInAnimation ],
 })
 export class AboutComponent implements OnInit{
@@ -14,7 +14,6 @@ export class AboutComponent implements OnInit{
     // Animation callback when slide animation is complete
     this.fadeInComplete = true;
   }
-
 
   images = [
     { src: '../../../assets/images/surf2.jpg', alt: 'Image 1' },

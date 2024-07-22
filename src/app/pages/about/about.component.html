@@ -1,6 +1,6 @@
+<div class="row justify-content-center p-3 p-md-5">
 
-
-<div [@routeAnimations] class="global-div" >
+<div [@routeAnimations] class="global-div col-md-10">
 
   <h1>My programming journey</h1>
 
@@ -13,8 +13,9 @@
     education leading to a profession, for some reason I chose the field of
     electronics.
   </p>
-  <div class="gallery-container">
+  <div class="gallery-container d-flex flex-column flex-md-row">
     <div class="gallery">
+
       <img *ngFor="let image of images; let i = index"
            [src]="image.src"
            [alt]="image.alt"
@@ -39,14 +40,15 @@
     decentralized applications and testing smart contracts.
   </p>
   Here are some technologies I’ve been working with recently:
-  <ul>
-    <li>Javascript</li>
-    <li>Node.js</li>
-    <li>Postman</li>
-    <li>Selenium</li>
-    <li>Selenium IDE</li>
+  <ul class="pt-2">
+    <li class="fs-3 pt-2">Javascript</li>
+    <li class="fs-3 pt-2">Node.js</li>
+    <li class="fs-3 pt-2">Postman</li>
+    <li class="fs-3 pt-2">Selenium</li>
+    <li class="fs-3 pt-2">Selenium IDE</li>
   </ul>
 
+</div>
 </div>
 
 
